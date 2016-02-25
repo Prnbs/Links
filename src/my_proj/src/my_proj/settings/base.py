@@ -1,5 +1,5 @@
 """
-Django settings for Links project.
+Django settings for my_proj project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -77,7 +77,6 @@ INSTALLED_APPS = (
 
     'profiles',
     'accounts',
-    'tagged_links',
 
 )
 
@@ -91,9 +90,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Links.urls'
+ROOT_URLCONF = 'my_proj.urls'
 
-WSGI_APPLICATION = 'Links.wsgi.application'
+WSGI_APPLICATION = 'my_proj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases

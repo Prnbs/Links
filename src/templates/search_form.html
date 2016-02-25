@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="" method="get">
+        <input type="text" name="email">
+        <input type="submit" value="Search">
+    </form>
+    {% if tags_and_urls %}
+        <ul>
+            {% for tag_and_url in tags_and_urls %}
+                <a href="{{ tag_and_url.url }}">{{tag_and_url.url}}</a>
+                <ul>
+                {% for tags in tag_and_url.tags %}
+                    <li>{{ tags.tags }}</li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
